@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 import Loader from '../../components/common/Loader';
 
+const CLOTH_EMOJI = {
+  shirt: '👕', pant: '👖', dress: '👗', jacket: '🧥',
+  shoes: '👟', accessories: '👜', other: '🛍️',
+};
+
 const CartPage = () => {
   const { cart, cartLoading, removeFromCart, clearCart } = useCart();
 
@@ -45,7 +50,7 @@ const CartPage = () => {
             const finalPrice = p.rate - (p.rate * (p.discount || 0)) / 100;
             return (
               <div className="cart-item" key={item._id || p._id}>
-                <span style={{ fontSize: '2rem' }}>👕</span>
+                <span style={{ fontSize: '2rem' }}>{CLOTH_EMOJI[p.clothType] || '🛍️'}</span>
                 <div className="cart-item-info">
                   <div className="cart-item-title">{p.title}</div>
                   <div className="cart-item-price">₹{finalPrice.toFixed(2)} × {item.quantity} = ₹{(finalPrice * item.quantity).toFixed(2)}</div>
