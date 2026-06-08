@@ -4,7 +4,7 @@ const User = require('../models/User');
 // Protect route - verify JWT
 const protect = async (req, res, next) => {
   let token;
-console.log("req.headers.authorization",req.headers.authorization)
+
   if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
     token = req.headers.authorization.split(' ')[1];
   }

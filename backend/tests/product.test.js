@@ -9,7 +9,7 @@ let userToken;
 let createdProductId;
 
 beforeAll(async () => {
-  await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/ecommerce_test');
+  await mongoose.connect(process.env.MONGO_URI_TEST || 'mongodb://localhost:27017/ecommerce_test');
 
   // Create admin user
   const adminRes = await request(app).post('/api/auth/register').send({
