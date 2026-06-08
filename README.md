@@ -136,8 +136,7 @@ Tests cover:
 
 | Tool            | How it was used                                               |
 |-----------------|---------------------------------------------------------------|
-| Claude (Anthropic) | Generated project scaffold, folder structure, and boilerplate for controllers, routes, models, and React components |
-| Claude (Anthropic) | API integration assistance — helped structure the axios service layer (`services/api.js`) and context providers |
+| Claude (Anthropic) | Provided assistance with CSS styling, created test files, helped identify and fix bugs, and suggested solutions for development errors during implementation. |
 
 ---
 
